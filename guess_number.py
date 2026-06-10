@@ -10,7 +10,7 @@ def main():
         attempts += 1
 
         print(f"Твоё число {mid}?")
-        answer = input("Введи > (больше), < (меньше) или = (угадал): ").strip()
+        answer = input("Введи > (больше), < (меньше), = (угадал) или q (выход): ").strip().lower()
 
         if answer == "=":
             print(f"Я угадал число {mid} за {attempts} попыток!")
@@ -19,8 +19,11 @@ def main():
             low = mid + 1
         elif answer == "<":
             high = mid - 1
+        elif answer == "q" or answer == "выход":
+            print("Выход из игры. До встречи!")
+            return
         else:
-            print("Ошибка: введи >, < или =")
+            print("Ошибка: введи >, <, = или q")
             attempts -= 1
             continue
     print("Жулик не воруй!")
