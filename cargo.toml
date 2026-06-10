@@ -1,0 +1,11 @@
+[package]
+name = "guess-number"
+version = "0.1.0"
+edition = "2021"
+authors = ["FelineFantasy <mailsalavata5@gmail.com>"]
+description = "Binary search game: computer guesses your number"
+license = "MIT"
+repository = "https://github.com/FelineFantasy/guess-number-rust"
+
+[dependencies]
+ask_input = "0.2.0"
