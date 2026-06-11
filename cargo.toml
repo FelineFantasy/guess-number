@@ -1,7 +1,7 @@
 [package]
 name = "guess-number"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 authors = ["FelineFantasy <mailsalavata5@gmail.com>"]
 description = "Binary search game: computer guesses your number"
 license = "MIT"
