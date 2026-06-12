@@ -24,10 +24,10 @@ A game where the computer guesses a number you thought of from 1 to 100 in 7 att
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/FelineFantasy/guess-number-rust.git
-cd guess-number-rust
+git clone https://github.com/FelineFantasy/guess-number.git
+cd guess-number
 cargo build --release
-./target/release/guess-number-rust
+./target/release/guess-number
 ```
 
 ## 👤 Author
