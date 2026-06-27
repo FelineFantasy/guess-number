@@ -8,4 +8,4 @@ license = "MIT"
 repository = "https://github.com/FelineFantasy/guess-number-rust"
 
 [dependencies]
-ask_input = "0.2.0"
+ask_input = "0.3.0"
