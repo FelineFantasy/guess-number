@@ -1,4 +1,4 @@
-# 🔢 Guess the Number
+# 🔢 Guess the Number [![Rust Version](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org/)
 
 A game where the computer guesses a number you thought of from 1 to 100 in 7 attempts (or less). Implemented using binary search.
 
