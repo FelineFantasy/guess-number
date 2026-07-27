@@ -13,7 +13,6 @@ fn main() {
 
     while low <= high {
         let mid = calculate_mid(low, high);
-        attempts += 1;
 
         print_guess_message(mid);
         let answer = get_user_answer();
@@ -51,14 +50,16 @@ fn get_user_answer() -> String {
 fn process_answer(answer: &str, mid: i32, low: &mut i32, high: &mut i32, attempts: &mut i32) -> bool {
     match answer {
         "=" => {
-            println!("Я угадал число {} за {} попыток!", mid, *attempts);
+            println!("Я угадал число {} за {} попыток!", mid, *attempts + 1);
             true
         }
         ">" => {
+            *attempts += 1;
             *low = mid + 1;
             false
         }
         "<" => {
+            *attempts += 1;
             *high = mid - 1;
             false
         }
@@ -68,7 +69,6 @@ fn process_answer(answer: &str, mid: i32, low: &mut i32, high: &mut i32, attempt
         }
         _ => {
             println!("Ошибка: введи >, <, = или exit");
-            *attempts -= 1;
             false
         }
     }
