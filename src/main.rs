@@ -18,7 +18,7 @@ fn main() {
         print_guess_message(mid);
         let answer = get_user_answer();
 
-        if process_answer(&answer, mid, &mut low, &mut high, attempts) {
+        if process_answer(&answer, mid, &mut low, &mut high, &mut attempts) {
             return;
         }
     }
@@ -48,10 +48,10 @@ fn get_user_answer() -> String {
     input().unwrap()
 }
 
-fn process_answer(answer: &str, mid: i32, low: &mut i32, high: &mut i32, attempts: i32) -> bool {
+fn process_answer(answer: &str, mid: i32, low: &mut i32, high: &mut i32, attempts: &mut i32) -> bool {
     match answer {
         "=" => {
-            println!("Я угадал число {} за {} попыток!", mid, attempts);
+            println!("Я угадал число {} за {} попыток!", mid, *attempts);
             true
         }
         ">" => {
@@ -68,6 +68,7 @@ fn process_answer(answer: &str, mid: i32, low: &mut i32, high: &mut i32, attempt
         }
         _ => {
             println!("Ошибка: введи >, <, = или exit");
+            *attempts -= 1;
             false
         }
     }
