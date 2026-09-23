@@ -4,8 +4,8 @@ const MIN: i32 = 1;
 const MAX: i32 = 100;
 
 fn main() {
-    let mut low = 1;
-    let mut high = 100;
+    let mut low = MIN;
+    let mut high = MAX;
     let mut attempts = 0;
 
     print_start_message();
