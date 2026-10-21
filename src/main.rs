@@ -21,7 +21,7 @@ fn main() {
             return;
         }
     }
-    
+
     print_cheater_message();
 }
 
